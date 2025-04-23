@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 API demók</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>Web-programozás-1 Előadás Házi feladat</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Kezdőlap</a></li>
+        <li><a href="tabla.html">Táblázat</a></li>
+        <li><a href="html5.html" class="active">HTML5</a></li>
+        <li><a href="chart.html">ChartJS</a></li>
+        <li><a href="ajax.html">AJAX</a></li>
+        <li><a href="oojs.html">OOJS</a></li>
+    </ul>
+</nav>
+
+<aside>
+    <p>HTML5 API példák – Web Storage, Geolocation, Web Workers stb.</p>
+</aside>
+
+<main id="content">
+    <h2>HTML5 API példák</h2>
+
+    <section>
+        <h3>1. Web Storage</h3>
+        <input type="text" id="storageInput" placeholder="Írj be valamit...">
+        <button onclick="saveToLocal()">Mentés</button>
+        <p>Elmentett érték: <span id="storageResult"></span></p>
+    </section>
+
+    <section>
+        <h3>2. Web Worker</h3>
+        <button onclick="startWorker()">Számolás indítása</button>
+        <p>Eredmény: <span id="workerResult">...</span></p>
+    </section>
+
+    <section>
+        <h3>3. Geolocation</h3>
+        <button onclick="getLocation()">Helyzet lekérése</button>
+        <p>Hely: <span id="location">...</span></p>
+    </section>
+
+    <section>
+        <h3>4. Drag & Drop</h3>
+        <div id="dragContainer">
+            <div id="drag1" draggable="true" ondragstart="drag(event)">🎯 Húzz el</div>
+            <div id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">Ide dobd</div>
+        </div>
+    </section>
+
+    <section>
+        <h3>5. Canvas</h3>
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000;"></canvas>
+    </section>
+
+    <section>
+        <h3>6. SVG</h3>
+        <svg width="200" height="100">
+            <circle cx="50" cy="50" r="40" fill="blue" />
+            <rect x="100" y="20" width="80" height="60" fill="green" />
+        </svg>
+    </section>
+</main>
+
+<footer>
+    <p>Készítők: Bozó-Lőrincz Flóra (DHJUJT), Szenti Richárd Dániel (MT86BR)</p>
+</footer>
+
+<script src="js/html5.js"></script>
+</body>
+</html>
